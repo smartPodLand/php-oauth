@@ -2,7 +2,8 @@ PHP oauth client with Fanapium SSO
 ==================================
 This is a simple php app that uses fanapium single sign on service  based on oauth 2.0 service
 
-##About SSO
+About SSO
+----------
 In this sample app authorization code flow is implemented, first you send a authorization request to _/oauth2/authorize_ endpoint like table below:
  
 Request | Response (redirect)
@@ -42,7 +43,8 @@ for study more about Oauth2 concept see the link below:
 https://aaronparecki.com/oauth-2-simplified/ 
 
 
-##How to use this project
+How to use this project
+-----------------------
 
 This project is built using simple php and access_token and refresh token are retrieved using curl and stored in php default $_SESSION magic variable for running this project you must enter your client_id and client_secret and other needed information in config.php file.
 
