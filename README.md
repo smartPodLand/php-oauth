@@ -7,8 +7,8 @@ This is a simple php app that uses fanapium single sign on service  basedoatuth 
 
 برای استفاده از این کد ابتدا فایل config.php را باز کرده و مقادیر واقعی را در جای مناسب خود جایگزاری کنید.
 </div>
-```javascript
-function test() {
-console.log("look ma’, no spaces");
-}
-```
+    ```javascript
+    function test() {
+    console.log("look ma’, no spaces");
+    }
+    ```
