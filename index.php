@@ -10,7 +10,7 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>نمونه SSO</title>
 </head>
-<body>
+<body dir="rtl">
 <h1>خوش آمدید</h1>
 <ul>
     <?php
