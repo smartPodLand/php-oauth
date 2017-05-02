@@ -4,7 +4,7 @@ This is a simple php app that uses fanapium single sign on service  based on oau
 
 About SSO
 ----------
-In this sample app authorization code flow is implemented, first you send a authorization request to _/oauth2/authorize_ endpoint like table below:
+In this sample app authorization code flow is implemented, first you redirect to _/oauth2/authorize_ endpoint with parameters like table below to input their username and password:
  
 Request | Response (redirect)
 ------- | --------
@@ -13,7 +13,7 @@ https://auth2server.com/oauth2/authorize | https://example.com/oauth/callback
 &response_type=code |  &state=$STATE
 &redirect_uri=$CLIENT_REDIRECT_URI |
 
-                               
+For prompting sign up form just add prompt=signup parameter to the above request.                               
 Then you must use the returned code to request token, this time you send a request to _/oauth2/token_ endpoint like table below:
 
 Request | Response
