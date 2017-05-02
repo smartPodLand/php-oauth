@@ -12,8 +12,7 @@ https://auth2server.com/oauth2/authorize | https://example.com/oauth/callback
 ?client_id=$CLIENT_ID | ?code=$AUTHORIZATION_CODE
 &response_type=code |  &state=$STATE
 &redirect_uri=$CLIENT_REDIRECT_URI |
-&scope=profile email | 
-     &state=$STATE | 
+
                                
 Then you must use the returned code to request token, this time you send a request to _/oauth2/token_ endpoint like table below:
 
