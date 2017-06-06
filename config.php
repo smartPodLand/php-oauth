@@ -1,12 +1,15 @@
 <?php
-
 $config = [
     //main endpont:
-    "service"=>"__http://SERVICE.ENDPOINT/__",
-    //oauth endpoint:
-    "sso"=>"__http://SERVICE.ENDPOINT/oauth__",
-    "client_id"=>"__CLIENT_ID__",
-    "client_secret"=>"__CLIENT_SECRET__",
+    "service"=>"http://sandbox.fanapium.com:8080/",
+    "sso"=>"http://sandbox.fanapium.com/oauth2/",
+    "sso_service"=>"http://sandbox.fanapium.com/",
+    "client_id"=>"40f6433a961bc1aff11b5ba3",
+    "client_secret"=>"9bf8077e",
     //the url of where this app is deployed
-    "home"=>"http://WHERE_THIS_CODE_DEPLOYED/"
+    "home"=>"http://79.174.163.69/php-oauth-simple/"
 ];
+
+
+
+

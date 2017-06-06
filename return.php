@@ -3,7 +3,7 @@ include 'config.php';
 session_start();
 $_SESSION['keylead_code']=$_GET['code'];
 
-$url = 'demo.fanapium.com:12594/oauth2/token/';
+$url = $config['sso'].'/token/';
 $ch = curl_init($url);
 $fields = "client_id={$config['client_id']}&client_secret={$config['client_secret']}&code={$_GET['code']}&redirect_uri={$config['home']}return.php&grant_type=authorization_code";
 curl_setopt($ch, CURLOPT_POSTFIELDS, $fields);
