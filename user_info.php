@@ -1,25 +1,23 @@
 <?php
 include 'config.php';
 session_start();
-if(isset($_SESSION['access_token'])){
-    $url = $config['service'].'user';
+function getUser($access_token){
+    global $config;
+    $url = $config['sso_service'].'user';
     $ch = curl_init($url);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($ch, CURLOPT_HTTPHEADER, ["Authorization:Bearer {$_SESSION['access_token']}"]);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, ["Authorization:Bearer {$access_token}"]);
     $response = curl_exec($ch);
     curl_close($ch);
-    $result = json_decode($response);
+    return json_decode($response);
+}
+if(isset($_SESSION['access_token'])){
+
+    $result = getUser($_SESSION['access_token']);
+    include "layouts/header.php";
 ?>
-<!doctype html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>User info</title>
-</head>
-<body dir="rtl">
+    <h1>اطلاعات کاربر</h1>
+
 
 <ul>
     <li>
@@ -42,4 +40,5 @@ if(isset($_SESSION['access_token'])){
 else {
     echo "else";
 }
+include "layouts/footer.php";
 ?>
