@@ -13,7 +13,6 @@ include "layouts/header.php";
         <li><a href="isLoggedIn.php">صفحه محافظت شده</a></li>
         <pre>
         <?php
-        //print_r($_SESSION);
     }
     else {
     ?>
