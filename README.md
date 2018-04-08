@@ -1,6 +1,6 @@
-PHP oauth client with Fanapium SSO
+PHP oauth client with POD SSO
 ==================================
-This is a simple php app that uses fanapium single sign on service  based on oauth 2.0 service
+This is a simple php app that uses pod single sign on service  based on oauth 2.0 service
 
 About SSO
 ----------
@@ -8,7 +8,7 @@ In this sample app authorization code flow is implemented, first you redirect to
  
 Request | Response (redirect)
 ------- | --------
-https://auth2server.com/oauth2/authorize | https://example.com/oauth/callback
+https://accounts.pod.land/oauth2/authorize | https://example.com/oauth/callback
 ?client_id=$CLIENT_ID | ?code=$AUTHORIZATION_CODE
 &response_type=code |  &state=$STATE
 &redirect_uri=$CLIENT_REDIRECT_URI |
@@ -18,7 +18,7 @@ Then you must use the returned code to request token, this time you send a reque
 
 Request | Response
 ------- | --------
-POST https://auth2server.com/oauth2/token | {
+POST https://accounts.pod.land/oauth2/token | {
   ?grant_type=authorization_code | "access_token": "$ACCESS_TOKEN",
   &code=$AUTH_CODE | "token_type": "Bearer",
   &redirect_uri=$REDIRECT_URI | "expires_in": 3600,
